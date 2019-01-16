@@ -19,6 +19,7 @@ pipeline {
                     agent { label "linux-ci" }
                     environment {
                         GIT_CACHE_PATH = "${HOME}/cache"
+                        SCCACHE_BUCKET = 'sccache-brave-browser-lin'
                     }
                     stages {
                         stage('install') {
